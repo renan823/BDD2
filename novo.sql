@@ -5,7 +5,6 @@ create table transporte(
     Modelo varchar(40),
     Combustivel varchar(40),
     NumPass integer,
-    CNPJ char(14),
     primary key(COD)
 );
 
@@ -46,11 +45,7 @@ create table viagem(
     DuracaoViagem float,
     DataPartida date,
     DataChegada date,
-    CPFVendedor char(11),
-    FormaPagar varchar(40),
     Valor float,
-    CPFGuia char(11),
-    Cache float,
     foreign key(Cidade, Estado, Pais) references destino(Cidade, Estado, Pais),
     foreign key(CodTransporte) references transporte(COD),
     primary key(CodViagem)
