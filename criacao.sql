@@ -1,3 +1,6 @@
+create database viagem;
+use viagem;
+
 create table transporte(
     COD integer,
     Tipo varchar(40),
